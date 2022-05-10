@@ -1,0 +1,13 @@
+<form>
+Número 1: <input type="number" [(ngModel)]="num1" name="num1"/> 
+Número 2: <input type="number" [(ngModel)]="num2" name="num2"/> 
+<br/><br/>
+<div class="row" style="width: 50px;">
+<input type="button" value="+" (click)="add()" class="btn btn-primary"> 
+<input type="button" value="-" (click)="sub()" class="btn btn-primary"> 
+<input type="button" value="x" (click)="multiply()" class="btn btn-primary"> 
+<input type="button" value="/" (click)="divide()" class="btn btn-primary">
+</div>
+<br/><br/>
+Resultado: {{result}}
+</form>
