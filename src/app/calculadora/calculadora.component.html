@@ -1,13 +1,41 @@
 <form>
-Número 1: <input type="number" [(ngModel)]="num1" name="num1"/> 
-Número 2: <input type="number" [(ngModel)]="num2" name="num2"/> 
+<input type="text" disabled ="true" [(ngModel)]="operation" name="operation" style="width: 210px;"/> 
+
 <br/><br/>
-<div class="row" style="width: 50px;">
-<input type="button" value="+" (click)="add()" class="btn btn-primary"> 
-<input type="button" value="-" (click)="sub()" class="btn btn-primary"> 
-<input type="button" value="x" (click)="multiply()" class="btn btn-primary"> 
-<input type="button" value="/" (click)="divide()" class="btn btn-primary">
-</div>
+<table class="table" style="width: 100px;">
+    <tbody>
+        <tr>
+            <td><input type="button" value="1" (click)="append($event)" class="btn" style="background-color:#cfcdcd;"></td>
+            <td><input type="button" value="2" (click)="append($event)" class="btn" style="background-color:#cfcdcd;"></td>
+            <td><input type="button" value="3" (click)="append($event)" class="btn" style="background-color:#cfcdcd;"></td>
+            <td><input type="button" value="+" (click)="append($event)" class="btn btn-primary" style="width:38px ;"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" (click)="append($event)" class="btn"></td>
+            <td><input type="button" value="5" (click)="append($event)" class="btn"></td>
+            <td><input type="button" value="6" (click)="append($event)" class="btn"></td>
+            <td><input type="button" value="-" (click)="append($event)" class="btn btn-primary" style="width:38px ;"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" (click)="append($event)" class="btn" style="background-color:#cfcdcd;"></td>
+            <td><input type="button" value="8" (click)="append($event)" class="btn" style="background-color:#cfcdcd;"></td>
+            <td><input type="button" value="9" (click)="append($event)" class="btn" style="background-color:#cfcdcd;"></td>
+            <td><input type="button" value="*" (click)="append($event)" class="btn btn-primary" style="width:38px ;"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" (click)="clear()" class="btn" style="background-color:#cfcdcd;"></td>
+            <td><input type="button" value="0" (click)="append($event)" class="btn" style="background-color:#cfcdcd;"></td>
+            <td><input type="button" value="." (click)="append($event)" class="btn" style="background-color:#cfcdcd;"></td>
+            <td><input type="button" value="/" (click)="append($event)" class="btn btn-primary" style="width:38px ;"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="button" value="=" (click)="equal()" class="btn btn-primary" style="width:38px ;"></td>
+        </tr>
+
+    </tbody>
+</table>
 <br/><br/>
-Resultado: {{result}}
 </form>
